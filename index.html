@@ -4,6 +4,7 @@
 		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 		<link rel="stylesheet" href="leaflet-gps/dist/leaflet-gps.min.css" />
 		<script src="leaflet-gps/dist/leaflet-gps.min.js"></script>
+		<link rel="manifest" href="manifest.json">
 		<style type="text/css">
 			body {
 				margin: 0;
@@ -28,7 +29,15 @@
 			    maxZoom: 7,
 			    minZoom: 4
 			}).addTo(map);
-			map.addControl(new L.Control.Gps({ autoActive:true }));
+			map.addControl(new L.Control.Gps({
+				autoActive: true,
+				transform: function (latlng) {
+					return {
+						lat: latlng.lat * 581.96 - 31079,
+						lng: latlng.lng * 380.5 + 870.52
+					};
+				}
+			}));
 		</script>
 	</body>
 </html>
