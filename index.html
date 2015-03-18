@@ -2,6 +2,8 @@
 	<head>
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+		<link rel="stylesheet" href="leaflet-gps/dist/leaflet-gps.min.css" />
+		<script src="leaflet-gps/dist/leaflet-gps.min.js"></script>
 		<style type="text/css">
 			body {
 				margin: 0;
@@ -22,8 +24,11 @@
 		<script type="text/javascript">
 			var map = L.map('map').setView([44, 15], 6);
 			L.tileLayer('http://tfgm.pindarcreative.co.uk/maps/{z}/{x}/{y}.jpg', {
-			    attribution: 'Contains Ordnance Survey data © Crown copyright and database right 2015.'
+			    attribution: 'Contains Ordnance Survey data © Crown copyright and database right 2015.',
+			    maxZoom: 7,
+			    minZoom: 4
 			}).addTo(map);
+			map.addControl(new L.Control.Gps({ autoActive:true }));
 		</script>
 	</body>
 </html>
