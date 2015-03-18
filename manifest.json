@@ -14,8 +14,8 @@
         "sizes": "128x128",
         "density": 2
       }],
-  "scope": "/bike-leaflet/",
-  "start_url": "/bike-leaflet/index.html",
+  "scope": "/cycle-mcr/",
+  "start_url": "/cycle-mcr/index.html",
   "display": "fullscreen",
   "orientation": "portrait",
   "theme_color": "#008800"
