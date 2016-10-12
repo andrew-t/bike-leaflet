@@ -5,6 +5,8 @@ TFGM have a rather nice set of cycle maps at http://cycling.tfgm.com/Pages/Cycle
 
 I've made a tiny wrapper around their backend which gives a nice mobile interface and adds GPS support.
 
-http://github.andrewt.net/cycle-mcr
+https://andrew-tls.github.io/cycle-mcr
+
+(It's on my TLS org so that it can access GPS.)
 
 Icon from http://www.iconarchive.com/show/points-of-interest-icons-by-icons-land/Bicycle-Green-icon.html
